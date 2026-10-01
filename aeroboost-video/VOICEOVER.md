@@ -24,12 +24,17 @@ El gancho (0–3 s) es lo más importante: tiene que sonar como una pregunta rea
 2. Guarda el archivo como `public/voiceover/puerta-auto.mp3`.
 3. En `src/Root.tsx`, en el objeto `puerta`, cambia `voiceover: null` por `voiceover: "voiceover/puerta-auto.mp3"`. El sonido original de la aspiradora baja solo al 25 % para que quede de fondo.
 4. Si la grabación quedó con otros tiempos, ajusta `startMs` y `endMs` de cada línea en `src/ugc/script.ts` (`SCRIPT_PUERTA`) para que los subtítulos calcen.
-5. Renderiza:
+5. Renderiza y normaliza el volumen a unos −15 LUFS (el nivel normal en Reels):
 
 ```bash
 npx remotion render PuertaReel out/puerta-reel-9x16.mp4
 npx remotion render PuertaFeed out/puerta-feed-4x5.mp4
+for f in out/puerta-reel-9x16 out/puerta-feed-4x5; do
+  ffmpeg -y -i $f.mp4 -c:v copy -af loudnorm=I=-15:TP=-1.5:LRA=11 -c:a aac -b:a 192k $f-final.mp4
+done
 ```
+
+**Estado:** la voz ya está grabada (ElevenLabs, voz "Catalina - Chilean Spanish") en `public/voiceover/puerta-auto.mp3`, y los subtítulos están ajustados a sus tiempos reales. La voz dura 22,2 s, así que el video corre al 96 % de velocidad para calzar.
 
 ## Texto del anuncio en Meta
 

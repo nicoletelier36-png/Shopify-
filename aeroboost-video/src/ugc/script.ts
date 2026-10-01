@@ -5,14 +5,18 @@ import type { Caption } from "@remotion/captions";
 // VOICEOVER*.md guides list the same lines for recording.
 export type ScriptLine = { startMs: number; endMs: number; text: string };
 
-// public/puerta-auto.mp4 (21.5s). Angle: your car is dirtier than you think.
+// public/puerta-auto.mp4 (21.5s, played at 0.96× to fit the voice-over).
+// Angle: your car is dirtier than you think. Timed to
+// public/voiceover/puerta-auto.mp3 (ElevenLabs, "Catalina - Chilean Spanish").
 export const SCRIPT_PUERTA: ScriptLine[] = [
-  { startMs: 200, endMs: 2800, text: "¿Hace cuánto que no limpias la puerta de tu auto?" },
-  { startMs: 3000, endMs: 6600, text: "Mira todo lo que se junta ahí: migas, tierra, de todo." },
-  { startMs: 6900, endMs: 11400, text: "Con esta aspiradora inalámbrica lo saco en segundos, hasta de las ranuras." },
-  { startMs: 11700, endMs: 15900, text: "Trae tres boquillas, se carga con USB-C y cabe en la guantera." },
-  { startMs: 16200, endMs: 18600, text: "Y mira cómo quedó el depósito." },
-  { startMs: 18800, endMs: 21200, text: "Está a $24.990. Toca Comprar y pídela." },
+  { startMs: 0, endMs: 2440, text: "¿Hace cuánto que no limpias la puerta de tu auto?" },
+  { startMs: 2790, endMs: 4360, text: "Mira todo lo que se junta ahí:" },
+  { startMs: 4670, endMs: 6720, text: "migas, tierra, de todo." },
+  { startMs: 7220, endMs: 11320, text: "Con esta aspiradora inalámbrica lo saco en segundos, hasta de las ranuras." },
+  { startMs: 11720, endMs: 15670, text: "Trae tres boquillas, se carga con USB-C y cabe en la guantera." },
+  { startMs: 16130, endMs: 17580, text: "Y mira cómo quedó el depósito." },
+  { startMs: 17870, endMs: 20210, text: "Está a $24.990." },
+  { startMs: 20580, endMs: 22000, text: "Toca Comprar y pídela." },
 ];
 
 // public/hogar-mascotas.mp4, edited down to 7.3s (see Root.tsx). Angle: stop

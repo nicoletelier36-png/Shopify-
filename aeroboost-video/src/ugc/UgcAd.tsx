@@ -15,6 +15,9 @@ export type Clip = {
   durationInFrames: number;
   // Optional punch-in for this clip, e.g. to crop a watermark out of frame.
   zoom?: { scale: number; origin: string };
+  // Slightly slow footage down (e.g. 0.96) to fit a longer voice-over.
+  // durationInFrames is output frames; source used = durationInFrames × rate.
+  playbackRate?: number;
 };
 export type EndPhoto = { src: string; imgW: number; imgH: number; durationInFrames: number };
 
@@ -55,6 +58,7 @@ export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, endPhoto, script, la
               <Video
                 src={staticFile(video)}
                 trimBefore={clip.trimBefore}
+                playbackRate={clip.playbackRate ?? 1}
                 objectFit="cover"
                 style={{
                   width: "100%",

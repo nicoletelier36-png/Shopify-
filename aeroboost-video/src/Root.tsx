@@ -16,13 +16,14 @@ const feed = { width: 1080, height: 1350, fps: 30 };
 
 const puerta: UgcAdProps = {
   video: "puerta-auto.mp4",
-  clips: [{ trimBefore: 0, durationInFrames: 643 }],
+  // 668 output frames × 0.96 = 641 source frames, so the 22.2s voice fits.
+  clips: [{ trimBefore: 0, durationInFrames: 668, playbackRate: 0.96 }],
   endPhoto: null,
   script: SCRIPT_PUERTA,
   label: "Aspiradora inalámbrica 3 en 1",
   price: "$24.990",
-  priceFromMs: 18800,
-  voiceover: null,
+  priceFromMs: 17870,
+  voiceover: "voiceover/puerta-auto.mp3",
 };
 
 // The 3.43s–8.2s stretch of the source uses a wide floor head we don't sell,
