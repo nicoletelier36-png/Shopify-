@@ -159,3 +159,49 @@ Título: `Lo que esconde tu sillón` · CTA: Comprar
 **Ojo:**
 - La aspiradora del video tiene **detalles naranjos**, y la AeroBoost es **toda negra**. El cierre con nuestras fotos ayuda, pero si un cliente espera el modelo naranjo puede reclamar. Lo ideal es regrabar estas mismas tomas con tu producto.
 - El video es de otra creadora (TikTok @melissabojorquez25, por el nombre del archivo). Para pautarlo necesitas su permiso.
+
+---
+
+# Anuncio "Riel": dato curioso
+
+Video: `public/riel.mp4` (33 s), editado a 17 s. Composiciones: `RielReel` (9:16) y `RielFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_RIEL`).
+
+**Ángulo:** dato curioso con humor. Un estudio de 2009 (Layton y Beamer, *Environmental Science & Technology*) encontró que cerca del 60 % del polvo de una casa viene de afuera. El riel de la ventana es justo por donde entra.
+
+**Edición:**
+- Se sacó el meme del final (desde el segundo 30,4).
+- Las partes lentas van más rápidas (1,3× y 1,5×).
+- Se agregó un **antes y después** con dos cuadros del mismo video (4,0 s y 24,6 s).
+- Cierra con nuestra foto del producto y el precio.
+
+| Tiempo | Imagen | Voz en off |
+|---|---|---|
+| 0–3,8 s | Riel lleno de tierra | Dato curioso: más de la mitad del polvo de tu casa viene de afuera. |
+| 4–5,6 s | Empieza a aspirar | ¿Y por dónde entra? Por acá. |
+| 5,8–8,2 s | Aspirando | Mi riel tenía más tierra que mis plantas. |
+| 8,4–9,7 s | Depósito lleno | Mira el depósito. |
+| 9,9–11,9 s | Riel limpio | Y eso que era un solo riel. |
+| 12,1–14,3 s | Antes / Después | Antes… y después. |
+| 14,5–17 s | Producto + precio | Veinticuatro mil novecientos noventa. Toca Comprar. |
+
+Texto para pegar en ElevenLabs (Victoria o Catalina):
+```
+Dato curioso: más de la mitad del polvo de tu casa viene de afuera. ¿Y por dónde entra? Por acá. Mi riel tenía más tierra que mis plantas. Mira el depósito. Y eso que era un solo riel. Antes… y después. Veinticuatro mil novecientos noventa. Toca Comprar.
+```
+
+## Texto del anuncio en Meta
+```
+Dato curioso 🤓: más de la mitad del polvo de tu casa entra desde afuera… y se queda en los rieles de las ventanas.
+
+La AeroBoost 3 en 1 lo saca en segundos con su boquilla fina:
+✅ Inalámbrica, carga USB-C
+✅ 3 boquillas
+✅ Filtro lavable
+
+👉 $24.990. Toca "Comprar".
+```
+Título: `¿Hace cuánto no limpias tus rieles?` · CTA: Comprar
+
+**Ojo:**
+- La aspiradora del video es **gris plateada** y la AeroBoost es negra.
+- El video es de otro creador (TikTok @carrielifepro, por el nombre del archivo). Para pautarlo necesitas su permiso.

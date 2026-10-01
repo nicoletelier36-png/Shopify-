@@ -7,6 +7,8 @@ import { colors, fontFamily } from "../theme";
 import type { ScriptLine } from "./script";
 import { scriptToCaptions } from "./script";
 import { TikTokCaptions } from "./TikTokCaptions";
+import type { BeforeAfterShot } from "./BeforeAfter";
+import { BeforeAfter } from "./BeforeAfter";
 
 // Real (UGC-style) footage + voice-over script captions, product label and a
 // price sticker, for Meta Ads. One component, one script per video.
@@ -22,13 +24,15 @@ export type Clip = {
 export type EndPhoto = { src: string; imgW: number; imgH: number; durationInFrames: number };
 
 // Total length of an ad, for the <Composition> durationInFrames.
-export const ugcDuration = (clips: Clip[], endPhotos: EndPhoto[]) =>
-  [...clips, ...endPhotos].reduce((sum, c) => sum + c.durationInFrames, 0);
+export const ugcDuration = (clips: Clip[], endPhotos: EndPhoto[], beforeAfter: BeforeAfterShot | null = null) =>
+  [...clips, ...endPhotos].reduce((sum, c) => sum + c.durationInFrames, 0) + (beforeAfter?.durationInFrames ?? 0);
 
 export type UgcAdProps = {
   // Footage inside public/, and the parts of it to keep (in source frames).
   video: string;
   clips: Clip[];
+  // Optional before/after split between the footage and the product shots.
+  beforeAfter: BeforeAfterShot | null;
   // Product shots after the footage (e.g. what's in the box), in order.
   endPhotos: EndPhoto[];
   script: ScriptLine[];
@@ -40,7 +44,7 @@ export type UgcAdProps = {
   voiceover: string | null;
 };
 
-export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, endPhotos, script, label, price, priceFromMs, voiceover }) => {
+export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, beforeAfter, endPhotos, script, label, price, priceFromMs, voiceover }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
 
@@ -71,6 +75,11 @@ export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, endPhotos, script, l
               />
             </Series.Sequence>
           ))}
+          {beforeAfter ? (
+            <Series.Sequence name="Antes y después" durationInFrames={beforeAfter.durationInFrames} premountFor={fps}>
+              <BeforeAfter before={beforeAfter.before} after={beforeAfter.after} />
+            </Series.Sequence>
+          ) : null}
           {endPhotos.map((photo) => (
             <Series.Sequence key={photo.src} name={`Foto ${photo.src}`} durationInFrames={photo.durationInFrames} premountFor={fps}>
               <Shot src={photo.src} imgW={photo.imgW} imgH={photo.imgH} focus={{ x: photo.imgW / 2, y: photo.imgH / 2 }} zoomFrom={1.0} zoomTo={1.1} />

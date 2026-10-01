@@ -4,7 +4,7 @@ import type { SwapAdProps } from "./swap/SwapAd";
 import { SwapAd, swapDuration } from "./swap/SwapAd";
 import { AEROBOOST_DURATION, AeroBoostAd } from "./AeroBoostAd";
 import { AEROBOOST_DEMO_DURATION, AeroBoostDemo } from "./AeroBoostDemo";
-import { SCRIPT_HOGAR, SCRIPT_PUERTA, SCRIPT_SILLON } from "./ugc/script";
+import { SCRIPT_HOGAR, SCRIPT_PUERTA, SCRIPT_RIEL, SCRIPT_SILLON } from "./ugc/script";
 import type { UgcAdProps } from "./ugc/UgcAd";
 import { UgcAd, ugcDuration } from "./ugc/UgcAd";
 import { CtaScene } from "./scenes/CtaScene";
@@ -20,6 +20,7 @@ const puerta: UgcAdProps = {
   video: "puerta-auto.mp4",
   // 668 output frames × 0.96 = 641 source frames, so the 22.2s voice fits.
   clips: [{ trimBefore: 0, durationInFrames: 668, playbackRate: 0.96 }],
+  beforeAfter: null,
   endPhotos: [],
   script: SCRIPT_PUERTA,
   label: "Aspiradora inalámbrica 3 en 1",
@@ -44,6 +45,7 @@ const hogar: UgcAdProps = {
     // 70 × 0.9 = 63 source frames (vaciado al basurero).
     { trimBefore: 246, durationInFrames: 70, playbackRate: 0.9 },
   ],
+  beforeAfter: null,
   endPhotos: [
     { src: "asp-piezas.jpg", imgW: 1264, imgH: 1264, durationInFrames: 40 },
     { src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 80 },
@@ -69,6 +71,7 @@ const sillon: UgcAdProps = {
     { trimBefore: 645, durationInFrames: 54 }, // full dust cup
     { trimBefore: 705, durationInFrames: 99 }, // more seams
   ],
+  beforeAfter: null,
   endPhotos: [
     { src: "asp-piezas.jpg", imgW: 1264, imgH: 1264, durationInFrames: 45 },
     { src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 102 },
@@ -97,6 +100,27 @@ const swap: SwapAdProps = {
   price: "$24.990",
   showText: false,
   audio: "lugares-audio.m4a",
+};
+
+// Window track full of dust (33s source). The meme at the end (30.4s+) is
+// cut; slow stretches are sped up; a before/after split uses two frames of
+// the same footage (4.0s and 24.6s). Angle: fun fact about household dust.
+const riel: UgcAdProps = {
+  video: "riel.mp4",
+  clips: [
+    // 215 × 1.3 ≈ 279 source frames: dirty track, vacuuming starts.
+    { trimBefore: 0, durationInFrames: 215, playbackRate: 1.3 },
+    { trimBefore: 312, durationInFrames: 78 }, // full dust cup
+    // 66 × 1.5 = 99 source frames: the track already clean.
+    { trimBefore: 591, durationInFrames: 66, playbackRate: 1.5 },
+  ],
+  beforeAfter: { before: "riel-antes.jpg", after: "riel-despues.jpg", durationInFrames: 75 },
+  endPhotos: [{ src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 75 }],
+  script: SCRIPT_RIEL,
+  label: "Aspiradora inalámbrica 3 en 1",
+  price: "$24.990",
+  priceFromMs: 14500,
+  voiceover: null,
 };
 
 export const RemotionRoot: React.FC = () => {
@@ -138,6 +162,10 @@ export const RemotionRoot: React.FC = () => {
       <Folder name="Lugares">
         <Composition id="LugaresReel" component={SwapAd} durationInFrames={swapDuration(swap)} {...reel} defaultProps={swap} />
         <Composition id="LugaresFeed" component={SwapAd} durationInFrames={swapDuration(swap)} {...feed} defaultProps={swap} />
+      </Folder>
+      <Folder name="Riel">
+        <Composition id="RielReel" component={UgcAd} durationInFrames={ugcDuration(riel.clips, riel.endPhotos, riel.beforeAfter)} {...reel} defaultProps={riel} />
+        <Composition id="RielFeed" component={UgcAd} durationInFrames={ugcDuration(riel.clips, riel.endPhotos, riel.beforeAfter)} {...feed} defaultProps={riel} />
       </Folder>
       <Folder name="Sillon">
         <Composition id="SillonReel" component={UgcAd} durationInFrames={ugcDuration(sillon.clips, sillon.endPhotos)} {...reel} defaultProps={sillon} />

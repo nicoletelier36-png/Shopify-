@@ -47,6 +47,19 @@ export const SCRIPT_SILLON: ScriptLine[] = [
   { startMs: 28830, endMs: 29750, text: "Toca Comprar." },
 ];
 
+// public/riel.mp4, edited to 17s (see Root.tsx). Angle: fun fact. A 2009
+// study (Layton & Beamer, Environmental Science & Technology) found about 60%
+// of house dust comes from outdoors. Timings are estimates until recorded.
+export const SCRIPT_RIEL: ScriptLine[] = [
+  { startMs: 100, endMs: 3800, text: "Dato curioso: más de la mitad del polvo de tu casa viene de afuera." },
+  { startMs: 4000, endMs: 5600, text: "¿Y por dónde entra? Por acá." },
+  { startMs: 5800, endMs: 8200, text: "Mi riel tenía más tierra que mis plantas." },
+  { startMs: 8400, endMs: 9700, text: "Mira el depósito." },
+  { startMs: 9900, endMs: 11900, text: "Y eso que era un solo riel." },
+  { startMs: 12100, endMs: 14300, text: "Antes… y después." },
+  { startMs: 14500, endMs: 16800, text: "$24.990. Toca Comprar." },
+];
+
 // Split each line into words and spread them across the line's time span,
 // weighted by length (a rough stand-in for how long each word takes to say).
 // Re-time against the real recording once it exists.
