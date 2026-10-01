@@ -18,7 +18,7 @@ const puerta: UgcAdProps = {
   video: "puerta-auto.mp4",
   // 668 output frames × 0.96 = 641 source frames, so the 22.2s voice fits.
   clips: [{ trimBefore: 0, durationInFrames: 668, playbackRate: 0.96 }],
-  endPhoto: null,
+  endPhotos: [],
   script: SCRIPT_PUERTA,
   label: "Aspiradora inalámbrica 3 en 1",
   price: "$24.990",
@@ -27,22 +27,28 @@ const puerta: UgcAdProps = {
 };
 
 // The 3.43s–8.2s stretch of the source uses a wide floor head we don't sell,
-// so it's cut; the ad closes on our real nozzle set instead. The first shot
-// (frames 0–33) carries the creator's code in the top-left corner, so it is
-// zoomed from the bottom-right to push that corner out of frame.
+// so it's cut; the ad closes on our real nozzle set and the product. The first
+// shot (frames 0–33) carries the creator's code in the top-left corner, so it
+// is zoomed from the bottom-right to push that corner out of frame. Clips are
+// slowed a little so the 10.4s voice-over fits.
 const hogar: UgcAdProps = {
   video: "hogar-mascotas.mp4",
   clips: [
     { trimBefore: 0, durationInFrames: 34, zoom: { scale: 1.22, origin: "100% 100%" } },
-    { trimBefore: 34, durationInFrames: 69 },
-    { trimBefore: 246, durationInFrames: 63 },
+    // 92 × 0.75 = 69 source frames (zócalos + riel).
+    { trimBefore: 34, durationInFrames: 92, playbackRate: 0.75 },
+    // 66 × 0.95 = 63 source frames (vaciado al basurero).
+    { trimBefore: 246, durationInFrames: 66, playbackRate: 0.95 },
   ],
-  endPhoto: { src: "asp-piezas.jpg", imgW: 1264, imgH: 1264, durationInFrames: 54 },
+  endPhotos: [
+    { src: "asp-piezas.jpg", imgW: 1264, imgH: 1264, durationInFrames: 40 },
+    { src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 80 },
+  ],
   script: SCRIPT_HOGAR,
   label: "Aspiradora inalámbrica 3 en 1",
   price: "$24.990",
-  priceFromMs: 5600,
-  voiceover: null,
+  priceFromMs: 7780,
+  voiceover: "voiceover/hogar.mp3",
 };
 
 export const RemotionRoot: React.FC = () => {
@@ -50,8 +56,8 @@ export const RemotionRoot: React.FC = () => {
     <>
       <Composition id="AeroBoostReel" component={AeroBoostAd} durationInFrames={AEROBOOST_DURATION} {...reel} />
       <Folder name="Puerta">
-        <Composition id="PuertaReel" component={UgcAd} durationInFrames={ugcDuration(puerta.clips, puerta.endPhoto)} {...reel} defaultProps={puerta} />
-        <Composition id="PuertaFeed" component={UgcAd} durationInFrames={ugcDuration(puerta.clips, puerta.endPhoto)} {...feed} defaultProps={puerta} />
+        <Composition id="PuertaReel" component={UgcAd} durationInFrames={ugcDuration(puerta.clips, puerta.endPhotos)} {...reel} defaultProps={puerta} />
+        <Composition id="PuertaFeed" component={UgcAd} durationInFrames={ugcDuration(puerta.clips, puerta.endPhotos)} {...feed} defaultProps={puerta} />
       </Folder>
       <Folder name="Estaticos">
         <Still
@@ -82,8 +88,8 @@ export const RemotionRoot: React.FC = () => {
         />
       </Folder>
       <Folder name="Hogar">
-        <Composition id="HogarReel" component={UgcAd} durationInFrames={ugcDuration(hogar.clips, hogar.endPhoto)} {...reel} defaultProps={hogar} />
-        <Composition id="HogarFeed" component={UgcAd} durationInFrames={ugcDuration(hogar.clips, hogar.endPhoto)} {...feed} defaultProps={hogar} />
+        <Composition id="HogarReel" component={UgcAd} durationInFrames={ugcDuration(hogar.clips, hogar.endPhotos)} {...reel} defaultProps={hogar} />
+        <Composition id="HogarFeed" component={UgcAd} durationInFrames={ugcDuration(hogar.clips, hogar.endPhotos)} {...feed} defaultProps={hogar} />
       </Folder>
       <Folder name="Demo">
         <Composition id="DemoReel" component={AeroBoostDemo} durationInFrames={AEROBOOST_DEMO_DURATION} {...reel} defaultProps={{ price: "$24.990" }} />

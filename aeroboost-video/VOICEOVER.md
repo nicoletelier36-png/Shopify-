@@ -71,23 +71,24 @@ Mira todo lo que sale de la puerta del auto 😳 Aspiradora inalámbrica 3 en 1 
 
 # Anuncio "Hogar": guion de voz en off
 
-Video: `public/hogar-mascotas.mp4`, editado a 7,3 s. Composiciones: `HogarReel` (9:16) y `HogarFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_HOGAR`). Los cortes están en el objeto `hogar` de `src/Root.tsx`.
+Video: `public/hogar-mascotas.mp4`, editado a 10,5 s para calzar con la voz. Composiciones: `HogarReel` (9:16) y `HogarFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_HOGAR`). Los cortes están en el objeto `hogar` de `src/Root.tsx`.
 
 **Ángulo:** comodidad. No vale la pena sacar la aspiradora grande para cada mugre chica. Es distinto al del auto ("tu auto está más sucio de lo que crees"), así que sirven para probarlos uno contra otro en Meta.
 
 **Edición:**
 - Se sacaron todas las tomas con la boquilla ancha para pisos, porque no viene con nuestro producto: de 3,43 s a 8,2 s del original (escalera, borde de la cama, sillón y alfombra del perro).
 - La primera toma tiene un zoom para tapar el código del creador ("code dqd7438"), que aparece arriba a la izquierda.
-- Al final se agregan 1,8 s con la foto de nuestras boquillas reales, para que el cliente vea lo que recibe.
+- Al final van la foto de nuestras 3 boquillas reales (cuando la voz dice "tres boquillas") y la foto del producto con el precio.
+- **Voz:** ElevenLabs, voz "Victoria", en `public/voiceover/hogar.mp3`. Dura 10,4 s, así que las tomas de los zócalos y del vaciado van un poco más lentas.
 
 | Tiempo | Lo que se ve | Voz en off |
 |---|---|---|
-| 0,1–1,6 s | Pone la boquilla | Deja de sacar la aspiradora grande. |
-| 1,7–3,4 s | Zócalos y riel de la puerta | Esta llega a zócalos y rieles, |
-| 3,5–5,4 s | Vacía el depósito en el basurero | y se vacía directo al basurero. |
-| 5,6–7,2 s | Foto de las 3 boquillas + precio | Trae tres boquillas. Veinticuatro mil novecientos noventa. |
+| 0–2,1 s | Pone la boquilla | Deja de sacar la aspiradora grande. |
+| 2,4–4,2 s | Zócalos y riel de la puerta | Esta llega a zócalos y rieles, |
+| 4,2–6,1 s | Vacía el depósito en el basurero | y se vacía directo al basurero. |
+| 6,4–7,6 s | Foto de las 3 boquillas | Trae tres boquillas. |
+| 7,8–10,2 s | Foto del producto + precio | Veinticuatro mil novecientos noventa. |
 
-Para agregar la voz, sigue los mismos pasos que en el anuncio del auto: archivo `public/voiceover/hogar.mp3` y `voiceover` en el objeto `hogar`.
 
 ## Texto del anuncio en Meta
 

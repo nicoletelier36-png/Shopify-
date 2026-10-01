@@ -22,15 +22,15 @@ export type Clip = {
 export type EndPhoto = { src: string; imgW: number; imgH: number; durationInFrames: number };
 
 // Total length of an ad, for the <Composition> durationInFrames.
-export const ugcDuration = (clips: Clip[], endPhoto: EndPhoto | null) =>
-  clips.reduce((sum, c) => sum + c.durationInFrames, 0) + (endPhoto?.durationInFrames ?? 0);
+export const ugcDuration = (clips: Clip[], endPhotos: EndPhoto[]) =>
+  [...clips, ...endPhotos].reduce((sum, c) => sum + c.durationInFrames, 0);
 
 export type UgcAdProps = {
   // Footage inside public/, and the parts of it to keep (in source frames).
   video: string;
   clips: Clip[];
-  // Optional product shot after the footage (e.g. what's in the box).
-  endPhoto: EndPhoto | null;
+  // Product shots after the footage (e.g. what's in the box), in order.
+  endPhotos: EndPhoto[];
   script: ScriptLine[];
   label: string;
   price: string;
@@ -40,7 +40,7 @@ export type UgcAdProps = {
   voiceover: string | null;
 };
 
-export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, endPhoto, script, label, price, priceFromMs, voiceover }) => {
+export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, endPhotos, script, label, price, priceFromMs, voiceover }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
 
@@ -71,11 +71,11 @@ export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, endPhoto, script, la
               />
             </Series.Sequence>
           ))}
-          {endPhoto ? (
-            <Series.Sequence name="Producto" durationInFrames={endPhoto.durationInFrames} premountFor={fps}>
-              <Shot src={endPhoto.src} imgW={endPhoto.imgW} imgH={endPhoto.imgH} focus={{ x: endPhoto.imgW / 2, y: endPhoto.imgH / 2 }} zoomFrom={1.0} zoomTo={1.1} />
+          {endPhotos.map((photo) => (
+            <Series.Sequence key={photo.src} name={`Foto ${photo.src}`} durationInFrames={photo.durationInFrames} premountFor={fps}>
+              <Shot src={photo.src} imgW={photo.imgW} imgH={photo.imgH} focus={{ x: photo.imgW / 2, y: photo.imgH / 2 }} zoomFrom={1.0} zoomTo={1.1} />
             </Series.Sequence>
-          ) : null}
+          ))}
         </Series>
       </AbsoluteFill>
       <AbsoluteFill

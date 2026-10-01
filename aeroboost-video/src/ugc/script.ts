@@ -19,13 +19,15 @@ export const SCRIPT_PUERTA: ScriptLine[] = [
   { startMs: 20580, endMs: 22000, text: "Toca Comprar y pídela." },
 ];
 
-// public/hogar-mascotas.mp4, edited down to 7.3s (see Root.tsx). Angle: stop
-// dragging out the big vacuum for every little mess at home.
+// public/hogar-mascotas.mp4, edited to 10.4s (see Root.tsx). Angle: stop
+// dragging out the big vacuum for every little mess at home. Timed to
+// public/voiceover/hogar.mp3 (ElevenLabs, "Victoria").
 export const SCRIPT_HOGAR: ScriptLine[] = [
-  { startMs: 100, endMs: 1600, text: "Deja de sacar la aspiradora grande." },
-  { startMs: 1700, endMs: 3400, text: "Esta llega a zócalos y rieles," },
-  { startMs: 3500, endMs: 5400, text: "y se vacía directo al basurero." },
-  { startMs: 5600, endMs: 7200, text: "Trae tres boquillas. $24.990." },
+  { startMs: 0, endMs: 2070, text: "Deja de sacar la aspiradora grande." },
+  { startMs: 2440, endMs: 4250, text: "Esta llega a zócalos y rieles," },
+  { startMs: 4250, endMs: 6070, text: "y se vacía directo al basurero." },
+  { startMs: 6450, endMs: 7570, text: "Trae tres boquillas." },
+  { startMs: 7780, endMs: 10180, text: "$24.990." },
 ];
 
 // Split each line into words and spread them across the line's time span,
