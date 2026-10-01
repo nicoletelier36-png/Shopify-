@@ -13,7 +13,7 @@ const ACTIVE = "#FFE14D";
 export const TikTokCaptions: React.FC<{ captions: Caption[] }> = ({ captions }) => {
   const { fps } = useVideoConfig();
   const { pages } = useMemo(
-    () => createTikTokStyleCaptions({ captions, combineTokensWithinMilliseconds: 900 }),
+    () => createTikTokStyleCaptions({ captions, combineTokensWithinMilliseconds: 700 }),
     [captions],
   );
 
@@ -68,7 +68,7 @@ const CaptionPage: React.FC<{ page: ReturnType<typeof createTikTokStyleCaptions>
         {page.tokens.map((t) => {
           const active = nowMs >= t.fromMs && nowMs < t.toMs;
           return (
-            <span key={t.fromMs} style={{ color: active ? ACTIVE : "white", whiteSpace: "pre" }}>
+            <span key={t.fromMs} style={{ color: active ? ACTIVE : "white", whiteSpace: "pre-wrap" }}>
               {t.text}
             </span>
           );
