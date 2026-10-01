@@ -30,6 +30,20 @@ export const SCRIPT_HOGAR: ScriptLine[] = [
   { startMs: 9070, endMs: 11440, text: "$24.990." },
 ];
 
+// public/sillon.mp4, first 30s reordered (see Root.tsx). Angle: what's hiding
+// in your sofa. Timings are estimates until the voice-over is recorded.
+export const SCRIPT_SILLON: ScriptLine[] = [
+  { startMs: 100, endMs: 2900, text: "¿Has mirado lo que esconde tu sillón entre los cojines?" },
+  { startMs: 3200, endMs: 7600, text: "Migas, pelusas, tierrita: todo lo que se cae y nunca ves." },
+  { startMs: 8000, endMs: 13200, text: "Con la boquilla larga llegas al fondo de las costuras sin mover nada." },
+  { startMs: 13500, endMs: 15600, text: "Es inalámbrica y se carga con USB-C." },
+  { startMs: 15900, endMs: 21400, text: "Pásala por las uniones y sale todo, hasta lo que la aspiradora grande no alcanza." },
+  { startMs: 21600, endMs: 23600, text: "Mira todo lo que sacó." },
+  { startMs: 24000, endMs: 26900, text: "Y no es solo para el sillón: sirve para el auto y el escritorio." },
+  { startMs: 27200, endMs: 28700, text: "Trae tres boquillas." },
+  { startMs: 29000, endMs: 30800, text: "$24.990. Toca Comprar." },
+];
+
 // Split each line into words and spread them across the line's time span,
 // weighted by length (a rough stand-in for how long each word takes to say).
 // Re-time against the real recording once it exists.

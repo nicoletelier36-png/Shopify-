@@ -110,3 +110,52 @@ Descripción: `Inalámbrica, 3 en 1, carga USB-C`
 CTA: **Comprar**
 
 **Nota sobre derechos:** el video original es de otro creador (TikTok @mrsdscleaningreviews, por el nombre del archivo y el código en pantalla). Para usarlo en anuncios pagados necesitas su permiso o una licencia. Lo mismo aplica al video del auto si no es tuyo. Si Meta recibe un reclamo de derechos de autor, puede bajar el anuncio o restringir la cuenta.
+
+---
+
+# Anuncio "Sillón": guion de voz en off
+
+Video: `public/sillon.mp4` (los primeros 30 s del original, que viene sin audio). Composiciones: `SillonReel` (9:16) y `SillonFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_SILLON`). Cortes en el objeto `sillon` de `src/Root.tsx`.
+
+**Ángulo:** "lo que esconde tu sillón". Curiosidad con algo de asco, el mismo gancho que escala Uproot Clean ("lo que está enterrado en tu alfombra").
+
+**Edición:**
+- Abre con el momento en que saca migas de debajo del cojín (11,9–13,4 s del original), para que la mugre se vea en el primer segundo.
+- Sigue con 0–11,9 s y luego 13,4–27 s del original.
+- Cierra con la foto de nuestras 3 boquillas y la del producto con el precio. Dura 31 s.
+
+| Tiempo | Imagen | Voz en off |
+|---|---|---|
+| 0–3 s | Saca migas de debajo del cojín | ¿Has mirado lo que esconde tu sillón entre los cojines? |
+| 3–7,6 s | Aspira la costura llena de migas | Migas, pelusas, tierrita: todo lo que se cae y nunca ves. |
+| 8–13,2 s | Boquilla larga en las costuras | Con la boquilla larga llegas al fondo de las costuras sin mover nada. |
+| 13,5–15,6 s | Se ve la aspiradora completa | Es inalámbrica y se carga con USB-C. |
+| 15,9–21,4 s | Uniones del sillón | Pásala por las uniones y sale todo, hasta lo que la aspiradora grande no alcanza. |
+| 21,6–23,6 s | Depósito lleno | Mira todo lo que sacó. |
+| 24–26,9 s | Sigue aspirando | Y no es solo para el sillón: sirve para el auto y el escritorio. |
+| 27,2–28,7 s | Foto de las 3 boquillas | Trae tres boquillas. |
+| 29–31 s | Producto + precio | Veinticuatro mil novecientos noventa. Toca Comprar. |
+
+Texto para pegar en ElevenLabs (voz Victoria o Catalina):
+```
+¿Has mirado lo que esconde tu sillón entre los cojines? Migas, pelusas, tierrita: todo lo que se cae y nunca ves. Con la boquilla larga llegas al fondo de las costuras sin mover nada. Es inalámbrica y se carga con USB-C. Pásala por las uniones y sale todo, hasta lo que la aspiradora grande no alcanza. Mira todo lo que sacó. Y no es solo para el sillón: sirve para el auto y el escritorio. Trae tres boquillas. Veinticuatro mil novecientos noventa. Toca Comprar.
+```
+
+## Texto del anuncio en Meta
+```
+¿Has mirado entre los cojines de tu sillón? 😳
+
+Ahí se junta todo: migas, pelusas, pelos y tierrita que la aspiradora grande no alcanza.
+
+La AeroBoost 3 en 1 llega al fondo de las costuras en segundos:
+✅ Inalámbrica, carga USB-C
+✅ 3 boquillas (sillón, auto y escritorio)
+✅ Filtro lavable
+
+👉 $24.990. Toca "Comprar".
+```
+Título: `Lo que esconde tu sillón` · CTA: Comprar
+
+**Ojo:**
+- La aspiradora del video tiene **detalles naranjos**, y la AeroBoost es **toda negra**. El cierre con nuestras fotos ayuda, pero si un cliente espera el modelo naranjo puede reclamar. Lo ideal es regrabar estas mismas tomas con tu producto.
+- El video es de otra creadora (TikTok @melissabojorquez25, por el nombre del archivo). Para pautarlo necesitas su permiso.

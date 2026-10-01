@@ -2,7 +2,7 @@ import { Composition, Folder, Still } from "remotion";
 import { StaticAd } from "./static/StaticAd";
 import { AEROBOOST_DURATION, AeroBoostAd } from "./AeroBoostAd";
 import { AEROBOOST_DEMO_DURATION, AeroBoostDemo } from "./AeroBoostDemo";
-import { SCRIPT_HOGAR, SCRIPT_PUERTA } from "./ugc/script";
+import { SCRIPT_HOGAR, SCRIPT_PUERTA, SCRIPT_SILLON } from "./ugc/script";
 import type { UgcAdProps } from "./ugc/UgcAd";
 import { UgcAd, ugcDuration } from "./ugc/UgcAd";
 import { CtaScene } from "./scenes/CtaScene";
@@ -53,6 +53,27 @@ const hogar: UgcAdProps = {
   voiceover: "voiceover/hogar.mp3",
 };
 
+// First 30s of the source, reordered: the hook is the moment she pulls crumbs
+// out from under the cushion (11.9–13.4s). The footage has no audio track.
+// Ends on our own nozzle set and product shot.
+const sillon: UgcAdProps = {
+  video: "sillon.mp4",
+  clips: [
+    { trimBefore: 357, durationInFrames: 45 },
+    { trimBefore: 0, durationInFrames: 357 },
+    { trimBefore: 402, durationInFrames: 408 },
+  ],
+  endPhotos: [
+    { src: "asp-piezas.jpg", imgW: 1264, imgH: 1264, durationInFrames: 45 },
+    { src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 75 },
+  ],
+  script: SCRIPT_SILLON,
+  label: "Aspiradora inalámbrica 3 en 1",
+  price: "$24.990",
+  priceFromMs: 29000,
+  voiceover: null,
+};
+
 export const RemotionRoot: React.FC = () => {
   return (
     <>
@@ -88,6 +109,10 @@ export const RemotionRoot: React.FC = () => {
             footer: "Toca \"Comprar\" y pídela hoy 👇",
           }}
         />
+      </Folder>
+      <Folder name="Sillon">
+        <Composition id="SillonReel" component={UgcAd} durationInFrames={ugcDuration(sillon.clips, sillon.endPhotos)} {...reel} defaultProps={sillon} />
+        <Composition id="SillonFeed" component={UgcAd} durationInFrames={ugcDuration(sillon.clips, sillon.endPhotos)} {...feed} defaultProps={sillon} />
       </Folder>
       <Folder name="Hogar">
         <Composition id="HogarReel" component={UgcAd} durationInFrames={ugcDuration(hogar.clips, hogar.endPhotos)} {...reel} defaultProps={hogar} />
