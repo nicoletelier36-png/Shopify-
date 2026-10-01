@@ -1,5 +1,6 @@
 import { Composition, Folder } from "remotion";
 import { AEROBOOST_DURATION, AeroBoostAd } from "./AeroBoostAd";
+import { AEROBOOST_DEMO_DURATION, AeroBoostDemo } from "./AeroBoostDemo";
 import { CtaScene } from "./scenes/CtaScene";
 import { FeaturesScene } from "./scenes/FeaturesScene";
 import { HookScene } from "./scenes/HookScene";
@@ -7,11 +8,16 @@ import { RevealScene } from "./scenes/RevealScene";
 import { UsesScene } from "./scenes/UsesScene";
 
 const reel = { width: 1080, height: 1920, fps: 30 };
+const feed = { width: 1080, height: 1350, fps: 30 };
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition id="AeroBoostReel" component={AeroBoostAd} durationInFrames={AEROBOOST_DURATION} {...reel} />
+      <Folder name="Demo">
+        <Composition id="DemoReel" component={AeroBoostDemo} durationInFrames={AEROBOOST_DEMO_DURATION} {...reel} defaultProps={{ price: "$24.990" }} />
+        <Composition id="DemoFeed" component={AeroBoostDemo} durationInFrames={AEROBOOST_DEMO_DURATION} {...feed} defaultProps={{ price: "$24.990" }} />
+      </Folder>
       <Folder name="Escenas">
         <Composition
           id="Hook"
