@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "instagram-reels",
+      "confirmed_in": [
+        "aeroboost-beat-promo"
+      ],
+      "updated_at": "2026-10-01T21:24:21.411Z"
+    },
+    "aspect": {
+      "value": "1080x1920",
+      "confirmed_in": [
+        "aeroboost-beat-promo"
+      ],
+      "updated_at": "2026-10-01T21:24:21.472Z"
+    },
+    "language": {
+      "value": "es",
+      "confirmed_in": [
+        "aeroboost-beat-promo"
+      ],
+      "updated_at": "2026-10-01T21:24:21.529Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": [
+        "aeroboost-beat-promo"
+      ],
+      "updated_at": "2026-10-01T21:24:21.590Z"
+    },
+    "storyboard": {
+      "value": "no",
+      "confirmed_in": [
+        "aeroboost-beat-promo"
+      ],
+      "updated_at": "2026-10-01T21:24:21.642Z"
+    }
+  },
+  "sightings": {}
+}
