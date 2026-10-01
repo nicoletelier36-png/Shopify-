@@ -1,4 +1,5 @@
-import { Composition, Folder } from "remotion";
+import { Composition, Folder, Still } from "remotion";
+import { StaticAd } from "./static/StaticAd";
 import { AEROBOOST_DURATION, AeroBoostAd } from "./AeroBoostAd";
 import { AEROBOOST_DEMO_DURATION, AeroBoostDemo } from "./AeroBoostDemo";
 import { SCRIPT_HOGAR, SCRIPT_PUERTA } from "./ugc/script";
@@ -50,6 +51,34 @@ export const RemotionRoot: React.FC = () => {
       <Folder name="Puerta">
         <Composition id="PuertaReel" component={UgcAd} durationInFrames={ugcDuration(puerta.clips, puerta.endPhoto)} {...reel} defaultProps={puerta} />
         <Composition id="PuertaFeed" component={UgcAd} durationInFrames={ugcDuration(puerta.clips, puerta.endPhoto)} {...feed} defaultProps={puerta} />
+      </Folder>
+      <Folder name="Estaticos">
+        <Still
+          id="EstaticoAuto"
+          component={StaticAd}
+          {...{ width: 1080, height: 1350 }}
+          defaultProps={{
+            headline: "¿Tu auto lleno de",
+            highlight: "migas y polvo?",
+            photo: "asp-auto.jpg",
+            bullets: ["Inalámbrica, 120W", "Carga USB-C", "Filtro lavable", "Cabe en la guantera"],
+            price: "$24.990",
+            footer: "Toca \"Comprar\" y pídela hoy 👇",
+          }}
+        />
+        <Still
+          id="EstaticoHogar"
+          component={StaticAd}
+          {...{ width: 1080, height: 1350 }}
+          defaultProps={{
+            headline: "Olvídate de la",
+            highlight: "aspiradora grande",
+            photo: "asp-sillon.jpg",
+            bullets: ["Pelos de mascota", "Migas y polvo", "Sillón, auto y escritorio", "Inalámbrica, carga USB-C"],
+            price: "$24.990",
+            footer: "Toca \"Comprar\" y pídela hoy 👇",
+          }}
+        />
       </Folder>
       <Folder name="Hogar">
         <Composition id="HogarReel" component={UgcAd} durationInFrames={ugcDuration(hogar.clips, hogar.endPhoto)} {...reel} defaultProps={hogar} />
