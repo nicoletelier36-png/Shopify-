@@ -31,17 +31,20 @@ export const SCRIPT_HOGAR: ScriptLine[] = [
 ];
 
 // public/sillon.mp4, first 30s reordered (see Root.tsx). Angle: what's hiding
-// in your sofa. Timings are estimates until the voice-over is recorded.
+// in your sofa. Timed to public/voiceover/sillon.mp3 (ElevenLabs, "Victoria").
 export const SCRIPT_SILLON: ScriptLine[] = [
-  { startMs: 100, endMs: 2900, text: "¿Has mirado lo que esconde tu sillón entre los cojines?" },
-  { startMs: 3200, endMs: 7600, text: "Migas, pelusas, tierrita: todo lo que se cae y nunca ves." },
-  { startMs: 8000, endMs: 13200, text: "Con la boquilla larga llegas al fondo de las costuras sin mover nada." },
-  { startMs: 13500, endMs: 15600, text: "Es inalámbrica y se carga con USB-C." },
-  { startMs: 15900, endMs: 21400, text: "Pásala por las uniones y sale todo, hasta lo que la aspiradora grande no alcanza." },
-  { startMs: 21600, endMs: 23600, text: "Mira todo lo que sacó." },
-  { startMs: 24000, endMs: 26900, text: "Y no es solo para el sillón: sirve para el auto y el escritorio." },
-  { startMs: 27200, endMs: 28700, text: "Trae tres boquillas." },
-  { startMs: 29000, endMs: 30800, text: "$24.990. Toca Comprar." },
+  { startMs: 0, endMs: 2620, text: "¿Has mirado lo que esconde tu sillón entre los cojines?" },
+  { startMs: 2930, endMs: 5050, text: "Migas, pelusas, tierrita:" },
+  { startMs: 5310, endMs: 7460, text: "todo lo que se cae y nunca ves." },
+  { startMs: 7910, endMs: 11690, text: "Con la boquilla larga llegas al fondo de las costuras sin mover nada." },
+  { startMs: 12010, endMs: 14650, text: "Es inalámbrica y se carga con USB-C." },
+  { startMs: 15150, endMs: 19520, text: "Pásala por las uniones y sale todo, hasta lo que la aspiradora grande no alcanza." },
+  { startMs: 19930, endMs: 21210, text: "Mira todo lo que sacó." },
+  { startMs: 21570, endMs: 22830, text: "Y no es solo para el sillón:" },
+  { startMs: 23140, endMs: 24880, text: "sirve para el auto y el escritorio." },
+  { startMs: 25220, endMs: 26340, text: "Trae tres boquillas." },
+  { startMs: 26730, endMs: 28480, text: "$24.990." },
+  { startMs: 28830, endMs: 29750, text: "Toca Comprar." },
 ];
 
 // Split each line into words and spread them across the line's time span,

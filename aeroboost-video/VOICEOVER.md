@@ -121,20 +121,20 @@ Video: `public/sillon.mp4` (los primeros 30 s del original, que viene sin audio)
 
 **Edición:**
 - Abre con el momento en que saca migas de debajo del cojín (11,9–13,4 s del original), para que la mugre se vea en el primer segundo.
-- Sigue con 0–11,9 s y luego 13,4–27 s del original.
-- Cierra con la foto de nuestras 3 boquillas y la del producto con el precio. Dura 31 s.
+- Después van las tomas del original recortadas para que cada una caiga con su frase. Cierra con la foto de nuestras 3 boquillas y la del producto con el precio. Dura 30 s.
+- **Voz:** ElevenLabs, voz "Victoria", en `public/voiceover/sillon.mp3`. Los subtítulos siguen las 12 pausas reales de la grabación.
 
 | Tiempo | Imagen | Voz en off |
 |---|---|---|
-| 0–3 s | Saca migas de debajo del cojín | ¿Has mirado lo que esconde tu sillón entre los cojines? |
-| 3–7,6 s | Aspira la costura llena de migas | Migas, pelusas, tierrita: todo lo que se cae y nunca ves. |
-| 8–13,2 s | Boquilla larga en las costuras | Con la boquilla larga llegas al fondo de las costuras sin mover nada. |
-| 13,5–15,6 s | Se ve la aspiradora completa | Es inalámbrica y se carga con USB-C. |
-| 15,9–21,4 s | Uniones del sillón | Pásala por las uniones y sale todo, hasta lo que la aspiradora grande no alcanza. |
-| 21,6–23,6 s | Depósito lleno | Mira todo lo que sacó. |
-| 24–26,9 s | Sigue aspirando | Y no es solo para el sillón: sirve para el auto y el escritorio. |
-| 27,2–28,7 s | Foto de las 3 boquillas | Trae tres boquillas. |
-| 29–31 s | Producto + precio | Veinticuatro mil novecientos noventa. Toca Comprar. |
+| 0–2,6 s | Saca migas de debajo del cojín | ¿Has mirado lo que esconde tu sillón entre los cojines? |
+| 2,9–7,5 s | Aspira la costura llena de migas | Migas, pelusas, tierrita: todo lo que se cae y nunca ves. |
+| 7,9–11,7 s | Boquilla larga en las costuras | Con la boquilla larga llegas al fondo de las costuras sin mover nada. |
+| 12–14,7 s | Se ve la aspiradora completa | Es inalámbrica y se carga con USB-C. |
+| 15,2–19,5 s | Uniones del sillón | Pásala por las uniones y sale todo, hasta lo que la aspiradora grande no alcanza. |
+| 19,9–21,2 s | Depósito lleno | Mira todo lo que sacó. |
+| 21,6–24,9 s | Sigue aspirando | Y no es solo para el sillón: sirve para el auto y el escritorio. |
+| 25,2–26,3 s | Foto de las 3 boquillas | Trae tres boquillas. |
+| 26,7–30 s | Producto + precio | Veinticuatro mil novecientos noventa. Toca Comprar. |
 
 Texto para pegar en ElevenLabs (voz Victoria o Catalina):
 ```

@@ -53,25 +53,29 @@ const hogar: UgcAdProps = {
   voiceover: "voiceover/hogar.mp3",
 };
 
-// First 30s of the source, reordered: the hook is the moment she pulls crumbs
-// out from under the cushion (11.9–13.4s). The footage has no audio track.
-// Ends on our own nozzle set and product shot.
+// First 30s of the source, reordered and trimmed to the 30s voice-over: the
+// hook is the moment she pulls crumbs out from under the cushion
+// (11.9–13.4s); each later cut lands on its line of the script. The footage
+// has no audio track. Ends on our own nozzle set and product shot.
 const sillon: UgcAdProps = {
   video: "sillon.mp4",
   clips: [
-    { trimBefore: 357, durationInFrames: 45 },
-    { trimBefore: 0, durationInFrames: 357 },
-    { trimBefore: 402, durationInFrames: 408 },
+    { trimBefore: 357, durationInFrames: 45 }, // crumbs under the cushion
+    { trimBefore: 0, durationInFrames: 330 }, // crevices full of crumbs
+    { trimBefore: 402, durationInFrames: 60 }, // full view of the vacuum
+    { trimBefore: 465, durationInFrames: 165 }, // seams
+    { trimBefore: 645, durationInFrames: 54 }, // full dust cup
+    { trimBefore: 705, durationInFrames: 99 }, // more seams
   ],
   endPhotos: [
     { src: "asp-piezas.jpg", imgW: 1264, imgH: 1264, durationInFrames: 45 },
-    { src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 75 },
+    { src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 102 },
   ],
   script: SCRIPT_SILLON,
   label: "Aspiradora inalámbrica 3 en 1",
   price: "$24.990",
-  priceFromMs: 29000,
-  voiceover: null,
+  priceFromMs: 26730,
+  voiceover: "voiceover/sillon.mp3",
 };
 
 export const RemotionRoot: React.FC = () => {
