@@ -30,15 +30,17 @@ const puerta: UgcAdProps = {
 // so it's cut; the ad closes on our real nozzle set and the product. The first
 // shot (frames 0–33) carries the creator's code in the top-left corner, so it
 // is zoomed from the bottom-right to push that corner out of frame. Clips are
-// slowed a little so the 10.4s voice-over fits.
+// slowed so the 11.7s voice-over fits.
 const hogar: UgcAdProps = {
   video: "hogar-mascotas.mp4",
   clips: [
-    { trimBefore: 0, durationInFrames: 34, zoom: { scale: 1.22, origin: "100% 100%" } },
-    // 92 × 0.75 = 69 source frames (zócalos + riel).
-    { trimBefore: 34, durationInFrames: 92, playbackRate: 0.75 },
-    // 66 × 0.95 = 63 source frames (vaciado al basurero).
-    { trimBefore: 246, durationInFrames: 66, playbackRate: 0.95 },
+    // 49 × 0.7 ≈ 34 source frames (pone la boquilla).
+    { trimBefore: 0, durationInFrames: 49, playbackRate: 0.7, zoom: { scale: 1.22, origin: "100% 100%" } },
+    // 111 × 0.62 ≈ 69 source frames: orillas de la alfombra ("las orillas"),
+    // then the door track ("lo que se mete en las puertas").
+    { trimBefore: 34, durationInFrames: 111, playbackRate: 0.62 },
+    // 70 × 0.9 = 63 source frames (vaciado al basurero).
+    { trimBefore: 246, durationInFrames: 70, playbackRate: 0.9 },
   ],
   endPhotos: [
     { src: "asp-piezas.jpg", imgW: 1264, imgH: 1264, durationInFrames: 40 },
@@ -47,7 +49,7 @@ const hogar: UgcAdProps = {
   script: SCRIPT_HOGAR,
   label: "Aspiradora inalámbrica 3 en 1",
   price: "$24.990",
-  priceFromMs: 7780,
+  priceFromMs: 9070,
   voiceover: "voiceover/hogar.mp3",
 };
 
