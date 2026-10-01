@@ -1,5 +1,7 @@
 import { Composition, Folder, Still } from "remotion";
 import { StaticAd } from "./static/StaticAd";
+import type { SwapAdProps } from "./swap/SwapAd";
+import { SwapAd, swapDuration } from "./swap/SwapAd";
 import { AEROBOOST_DURATION, AeroBoostAd } from "./AeroBoostAd";
 import { AEROBOOST_DEMO_DURATION, AeroBoostDemo } from "./AeroBoostDemo";
 import { SCRIPT_HOGAR, SCRIPT_PUERTA, SCRIPT_SILLON } from "./ugc/script";
@@ -78,6 +80,25 @@ const sillon: UgcAdProps = {
   voiceover: "voiceover/sillon.mp3",
 };
 
+// Product fixed in the centre while the place changes on every beat of the
+// reference reel's music (every 1.76s), clean images with no text.
+// Backgrounds generated with Canva AI (top-down, no product).
+const swap: SwapAdProps = {
+  scenes: [
+    { bg: "fondos/auto-asiento.jpg", label: "Auto 🚗" },
+    { bg: "fondos/sillon.jpg", label: "Sillón 🛋️", kind: "hair" },
+    { bg: "fondos/escritorio.jpg", label: "Escritorio 💻" },
+    { bg: "fondos/auto-alfombra.jpg", label: "Alfombra del auto" },
+    { bg: "fondos/perro.jpg", label: "Rincón del perro 🐶", kind: "hair" },
+  ],
+  // Cuts at 1.76s, 3.52s, 5.28s, 7.04s, matching the music; 8.8s total.
+  sceneFrames: [53, 53, 52, 53, 53],
+  endFrames: 0,
+  price: "$24.990",
+  showText: false,
+  audio: "lugares-audio.m4a",
+};
+
 export const RemotionRoot: React.FC = () => {
   return (
     <>
@@ -113,6 +134,10 @@ export const RemotionRoot: React.FC = () => {
             footer: "Toca \"Comprar\" y pídela hoy 👇",
           }}
         />
+      </Folder>
+      <Folder name="Lugares">
+        <Composition id="LugaresReel" component={SwapAd} durationInFrames={swapDuration(swap)} {...reel} defaultProps={swap} />
+        <Composition id="LugaresFeed" component={SwapAd} durationInFrames={swapDuration(swap)} {...feed} defaultProps={swap} />
       </Folder>
       <Folder name="Sillon">
         <Composition id="SillonReel" component={UgcAd} durationInFrames={ugcDuration(sillon.clips, sillon.endPhotos)} {...reel} defaultProps={sillon} />
