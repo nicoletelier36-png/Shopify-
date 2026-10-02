@@ -4,7 +4,7 @@ import type { SwapAdProps } from "./swap/SwapAd";
 import { SwapAd, swapDuration } from "./swap/SwapAd";
 import { AEROBOOST_DURATION, AeroBoostAd } from "./AeroBoostAd";
 import { AEROBOOST_DEMO_DURATION, AeroBoostDemo } from "./AeroBoostDemo";
-import { SCRIPT_HOGAR, SCRIPT_PUERTA, SCRIPT_RIEL, SCRIPT_SILLON } from "./ugc/script";
+import { SCRIPT_HOGAR, SCRIPT_PUERTA, SCRIPT_RIEL, SCRIPT_SILLON, SCRIPT_UNBOXING } from "./ugc/script";
 import type { UgcAdProps } from "./ugc/UgcAd";
 import { UgcAd, ugcDuration } from "./ugc/UgcAd";
 import { CtaScene } from "./scenes/CtaScene";
@@ -127,6 +127,32 @@ const riel: UgcAdProps = {
   originalVolume: 0,
 };
 
+// Unboxing + car demo (16.4s source, no audio). The brand outro (14.4s+) is
+// cut; the unboxing is sped up, the "everything in the box" flat lay is held
+// longer, and it ends on the driver's mat going from dirty to clean (same
+// car, 12.5s → 13.4s in the source) before our product shot and price.
+const unboxing: UgcAdProps = {
+  video: "unboxing.mp4",
+  clips: [
+    { trimBefore: 0, durationInFrames: 49 }, // rear floor full of crumbs
+    { trimBefore: 49, durationInFrames: 39 }, // dirty front floor
+    // 121 × 1.6 ≈ 194 source frames: unboxing.
+    { trimBefore: 88, durationInFrames: 121, playbackRate: 1.6 },
+    // 22 × 0.5 = 11 source frames: everything in the box, held longer.
+    { trimBefore: 282, durationInFrames: 22, playbackRate: 0.5 },
+    // 68 × 1.2 ≈ 81 source frames: seat and cup holders.
+    { trimBefore: 293, durationInFrames: 68, playbackRate: 1.2 },
+    { trimBefore: 374, durationInFrames: 59 }, // driver's mat: dirty → clean
+  ],
+  beforeAfter: null,
+  endPhotos: [{ src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 60 }],
+  script: SCRIPT_UNBOXING,
+  label: "Aspiradora inalámbrica 3 en 1",
+  price: "$24.990",
+  priceFromMs: 12000,
+  voiceover: null,
+};
+
 export const RemotionRoot: React.FC = () => {
   return (
     <>
@@ -166,6 +192,10 @@ export const RemotionRoot: React.FC = () => {
       <Folder name="Lugares">
         <Composition id="LugaresReel" component={SwapAd} durationInFrames={swapDuration(swap)} {...reel} defaultProps={swap} />
         <Composition id="LugaresFeed" component={SwapAd} durationInFrames={swapDuration(swap)} {...feed} defaultProps={swap} />
+      </Folder>
+      <Folder name="Unboxing">
+        <Composition id="UnboxingReel" component={UgcAd} durationInFrames={ugcDuration(unboxing.clips, unboxing.endPhotos, unboxing.beforeAfter)} {...reel} defaultProps={unboxing} />
+        <Composition id="UnboxingFeed" component={UgcAd} durationInFrames={ugcDuration(unboxing.clips, unboxing.endPhotos, unboxing.beforeAfter)} {...feed} defaultProps={unboxing} />
       </Folder>
       <Folder name="Riel">
         <Composition id="RielReel" component={UgcAd} durationInFrames={ugcDuration(riel.clips, riel.endPhotos, riel.beforeAfter)} {...reel} defaultProps={riel} />

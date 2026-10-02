@@ -207,3 +207,49 @@ Título: `¿Hace cuánto no limpias tus rieles?` · CTA: Comprar
 **Ojo:**
 - La aspiradora del video es **gris plateada** y la AeroBoost es negra.
 - El video es de otro creador (TikTok @carrielifepro, por el nombre del archivo). Para pautarlo necesitas su permiso.
+
+---
+
+# Anuncio "Unboxing": qué trae la caja + resultado en el auto
+
+Video: `public/unboxing.mp4` (16,4 s, sin audio), editado a 13,9 s. Composiciones: `UnboxingReel` (9:16) y `UnboxingFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_UNBOXING`).
+
+**Ángulo:** unboxing con resultado. Muestra qué trae la caja, porque eso baja las dudas, y termina con un antes y después real (la misma alfombra del conductor, sucia y luego limpia).
+
+**Edición:**
+- Se sacó el logo de la marca 3endi del final (14,4 s en adelante).
+- El unboxing va a 1,6×, y la foto con todo lo que trae la caja dura el doble para que se alcance a ver.
+- Cierra con nuestra foto del producto y el precio.
+
+| Tiempo | Imagen | Voz en off |
+|---|---|---|
+| 0–1,7 s | Piso trasero lleno de migas | ¿Tu auto también está así? |
+| 1,8–2,9 s | Piso delantero sucio | Tranqui, tiene solución. |
+| 3–7,7 s | Unboxing y todo lo que trae | Esta aspiradora inalámbrica trae sus boquillas, el filtro y el cable USB-C. |
+| 7,7–10 s | Asiento y portavasos | Asientos, portavasos, ranuras… |
+| 10–11,9 s | Alfombra del conductor: sucia → limpia | Y así quedó. |
+| 12–13,9 s | Producto + precio | Veinticuatro mil novecientos noventa. Toca Comprar. |
+
+Texto para pegar en ElevenLabs (Catalina, Victoria o Cristian):
+```
+¿Tu auto también está así? Tranqui, tiene solución. Esta aspiradora inalámbrica trae sus boquillas, el filtro y el cable USB-C. Asientos, portavasos, ranuras… Y así quedó. Veinticuatro mil novecientos noventa. Toca Comprar.
+```
+
+## Texto del anuncio en Meta
+```
+¿Tu auto también está así? 😅
+
+Esto es lo que trae la AeroBoost 3 en 1 👇
+✅ Aspiradora inalámbrica
+✅ 3 boquillas: ranuras, asientos y alfombras
+✅ Filtro lavable y cable USB-C
+
+Asientos, portavasos, ranuras… y la alfombra queda como nueva.
+
+👉 $24.990. Toca "Comprar".
+```
+Título: `Mira lo que trae la caja` · CTA: Comprar
+
+**Ojo:**
+- La caja del video dice "3 in 1 Vacuum Cleaner" y algunas piezas pueden ser distintas a las tuyas. Revisa que lo que se ve calce con lo que recibe el cliente.
+- El video es de la marca 3endi (por el nombre del archivo y el logo del final). Para pautarlo necesitas su permiso.

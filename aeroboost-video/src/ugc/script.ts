@@ -65,6 +65,18 @@ export const SCRIPT_RIEL: ScriptLine[] = [
   { startMs: 12410, endMs: 13320, text: "Toca Comprar." },
 ];
 
+// public/unboxing.mp4, edited to 13.9s (see Root.tsx). Angle: unboxing +
+// result ("what's in the box" and a real before/after of the driver's mat).
+// Timings are estimates until the voice-over is recorded.
+export const SCRIPT_UNBOXING: ScriptLine[] = [
+  { startMs: 100, endMs: 1700, text: "¿Tu auto también está así?" },
+  { startMs: 1800, endMs: 2900, text: "Tranqui, tiene solución." },
+  { startMs: 3000, endMs: 7600, text: "Esta aspiradora inalámbrica trae sus boquillas, el filtro y el cable USB-C." },
+  { startMs: 7800, endMs: 9900, text: "Asientos, portavasos, ranuras…" },
+  { startMs: 10000, endMs: 11800, text: "Y así quedó." },
+  { startMs: 12000, endMs: 13800, text: "$24.990. Toca Comprar." },
+];
+
 // Split each line into words and spread them across the line's time span,
 // weighted by length (a rough stand-in for how long each word takes to say).
 // Re-time against the real recording once it exists.
