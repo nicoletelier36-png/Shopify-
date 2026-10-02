@@ -212,23 +212,25 @@ Título: `¿Hace cuánto no limpias tus rieles?` · CTA: Comprar
 
 # Anuncio "Unboxing": qué trae la caja + resultado en el auto
 
-Video: `public/unboxing.mp4` (16,4 s, sin audio), editado a 13,9 s. Composiciones: `UnboxingReel` (9:16) y `UnboxingFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_UNBOXING`).
+Video: `public/unboxing.mp4` (16,4 s, sin audio), editado a 19,5 s para calzar con la voz. Composiciones: `UnboxingReel` (9:16) y `UnboxingFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_UNBOXING`).
 
 **Ángulo:** unboxing con resultado. Muestra qué trae la caja, porque eso baja las dudas, y termina con un antes y después real (la misma alfombra del conductor, sucia y luego limpia).
 
 **Edición:**
 - Se sacó el logo de la marca 3endi del final (14,4 s en adelante).
 - El unboxing va a 1,6×, y la foto con todo lo que trae la caja dura el doble para que se alcance a ver.
-- Cierra con nuestra foto del producto y el precio.
+- Cierra con la foto de nuestras 3 boquillas, la del producto y el precio.
+- **Voz:** ElevenLabs, voz "Catalina - Chilean Spanish", en `public/voiceover/unboxing.mp3` (19,3 s). Los cortes y subtítulos siguen los tramos reales de la grabación.
 
 | Tiempo | Imagen | Voz en off |
 |---|---|---|
-| 0–1,7 s | Piso trasero lleno de migas | ¿Tu auto también está así? |
-| 1,8–2,9 s | Piso delantero sucio | Tranqui, tiene solución. |
-| 3–7,7 s | Unboxing y todo lo que trae | Esta aspiradora inalámbrica trae sus boquillas, el filtro y el cable USB-C. |
-| 7,7–10 s | Asiento y portavasos | Asientos, portavasos, ranuras… |
-| 10–11,9 s | Alfombra del conductor: sucia → limpia | Y así quedó. |
-| 12–13,9 s | Producto + precio | Veinticuatro mil novecientos noventa. Toca Comprar. |
+| 0–1,4 s | Piso trasero lleno de migas | ¿Tu auto también está así? |
+| 1,9–3,4 s | Piso delantero sucio | Tranqui, tiene solución. |
+| 4–9,3 s | Unboxing ("el cable" cae cuando saca el cable) | Esta aspiradora inalámbrica trae sus boquillas, el filtro y el cable USB-C. |
+| 9,3–10 s | Todo lo que trae la caja | |
+| 9,8–12,7 s | Asiento y portavasos | Asientos, portavasos, ranuras… |
+| 12,9–14,5 s | Alfombra del conductor: sucia → limpia | Y así quedó. |
+| 14,2–19,5 s | Foto de las 3 boquillas, producto + precio | Veinticuatro mil novecientos noventa. Toca Comprar. |
 
 Texto para pegar en ElevenLabs (Catalina, Victoria o Cristian):
 ```

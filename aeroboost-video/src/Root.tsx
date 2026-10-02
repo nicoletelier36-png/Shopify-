@@ -128,29 +128,37 @@ const riel: UgcAdProps = {
 };
 
 // Unboxing + car demo (16.4s source, no audio). The brand outro (14.4s+) is
-// cut; the unboxing is sped up, the "everything in the box" flat lay is held
-// longer, and it ends on the driver's mat going from dirty to clean (same
-// car, 12.5s → 13.4s in the source) before our product shot and price.
+// cut; the "everything in the box" flat lay is held longer, and it ends on the
+// driver's mat going from dirty to clean (same car, 12.5s → 13.4s in the
+// source) before our nozzle set, product shot and price. Cuts are timed to
+// the 19.3s voice-over.
 const unboxing: UgcAdProps = {
   video: "unboxing.mp4",
   clips: [
-    { trimBefore: 0, durationInFrames: 49 }, // rear floor full of crumbs
-    { trimBefore: 49, durationInFrames: 39 }, // dirty front floor
-    // 121 × 1.6 ≈ 194 source frames: unboxing.
-    { trimBefore: 88, durationInFrames: 121, playbackRate: 1.6 },
+    // 58 × 0.84 ≈ 49 source frames: rear floor full of crumbs.
+    { trimBefore: 0, durationInFrames: 58, playbackRate: 0.84 },
+    // 46 × 0.84 ≈ 39 source frames: dirty front floor.
+    { trimBefore: 49, durationInFrames: 46, playbackRate: 0.84 },
+    // 175 × 1.11 ≈ 194 source frames: unboxing.
+    { trimBefore: 88, durationInFrames: 175, playbackRate: 1.11 },
     // 22 × 0.5 = 11 source frames: everything in the box, held longer.
     { trimBefore: 282, durationInFrames: 22, playbackRate: 0.5 },
-    // 68 × 1.2 ≈ 81 source frames: seat and cup holders.
-    { trimBefore: 293, durationInFrames: 68, playbackRate: 1.2 },
-    { trimBefore: 374, durationInFrames: 59 }, // driver's mat: dirty → clean
+    // 87 × 0.93 ≈ 81 source frames: seat and cup holders.
+    { trimBefore: 293, durationInFrames: 87, playbackRate: 0.93 },
+    // 15 × 1.8 = 27 source frames: driver's mat, dirty…
+    { trimBefore: 374, durationInFrames: 15, playbackRate: 1.8 },
+    { trimBefore: 401, durationInFrames: 32 }, // …and clean ("Y así quedó")
   ],
   beforeAfter: null,
-  endPhotos: [{ src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 60 }],
+  endPhotos: [
+    { src: "asp-piezas.jpg", imgW: 1264, imgH: 1264, durationInFrames: 46 },
+    { src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 102 },
+  ],
   script: SCRIPT_UNBOXING,
   label: "Aspiradora inalámbrica 3 en 1",
   price: "$24.990",
-  priceFromMs: 12000,
-  voiceover: null,
+  priceFromMs: 14180,
+  voiceover: "voiceover/unboxing.mp3",
 };
 
 export const RemotionRoot: React.FC = () => {

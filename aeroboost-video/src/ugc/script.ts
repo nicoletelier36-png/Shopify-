@@ -65,16 +65,19 @@ export const SCRIPT_RIEL: ScriptLine[] = [
   { startMs: 12410, endMs: 13320, text: "Toca Comprar." },
 ];
 
-// public/unboxing.mp4, edited to 13.9s (see Root.tsx). Angle: unboxing +
+// public/unboxing.mp4, edited to 19.4s (see Root.tsx). Angle: unboxing +
 // result ("what's in the box" and a real before/after of the driver's mat).
-// Timings are estimates until the voice-over is recorded.
+// Timed to public/voiceover/unboxing.mp3 (ElevenLabs, "Catalina - Chilean
+// Spanish").
 export const SCRIPT_UNBOXING: ScriptLine[] = [
-  { startMs: 100, endMs: 1700, text: "¿Tu auto también está así?" },
-  { startMs: 1800, endMs: 2900, text: "Tranqui, tiene solución." },
-  { startMs: 3000, endMs: 7600, text: "Esta aspiradora inalámbrica trae sus boquillas, el filtro y el cable USB-C." },
-  { startMs: 7800, endMs: 9900, text: "Asientos, portavasos, ranuras…" },
-  { startMs: 10000, endMs: 11800, text: "Y así quedó." },
-  { startMs: 12000, endMs: 13800, text: "$24.990. Toca Comprar." },
+  { startMs: 80, endMs: 1400, text: "¿Tu auto también está así?" },
+  { startMs: 1920, endMs: 3440, text: "Tranqui, tiene solución." },
+  { startMs: 3960, endMs: 6740, text: "Esta aspiradora inalámbrica trae sus boquillas," },
+  { startMs: 6840, endMs: 9260, text: "el filtro y el cable USB-C." },
+  { startMs: 9760, endMs: 12660, text: "Asientos, portavasos, ranuras…" },
+  { startMs: 13040, endMs: 13820, text: "Y así quedó." },
+  { startMs: 14180, endMs: 17980, text: "$24.990." },
+  { startMs: 18400, endMs: 19020, text: "Toca Comprar." },
 ];
 
 // Split each line into words and spread them across the line's time span,
