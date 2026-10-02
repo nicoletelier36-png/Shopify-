@@ -164,25 +164,27 @@ Título: `Lo que esconde tu sillón` · CTA: Comprar
 
 # Anuncio "Riel": dato curioso
 
-Video: `public/riel.mp4` (33 s), editado a 17 s. Composiciones: `RielReel` (9:16) y `RielFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_RIEL`).
+Video: `public/riel.mp4` (33 s), editado a 14,4 s para calzar con la voz. Composiciones: `RielReel` (9:16) y `RielFeed` (4:5). Guion en `src/ugc/script.ts` (`SCRIPT_RIEL`).
 
 **Ángulo:** dato curioso con humor. Un estudio de 2009 (Layton y Beamer, *Environmental Science & Technology*) encontró que cerca del 60 % del polvo de una casa viene de afuera. El riel de la ventana es justo por donde entra.
 
 **Edición:**
 - Se sacó el meme del final (desde el segundo 30,4).
+- **El audio original está silenciado**, porque alguien habla en inglés encima del ruido de la aspiradora y no se pueden separar. Solo se escucha la voz en off.
+- **Voz:** ElevenLabs, voz "Cristian Cornejo - Spanish Chilean", en `public/voiceover/riel.mp3` (13,3 s). Esa toma no dice el precio; lo muestra el sticker.
 - Las partes lentas van más rápidas (1,3× y 1,5×).
 - Se agregó un **antes y después** con dos cuadros del mismo video (4,0 s y 24,6 s).
 - Cierra con nuestra foto del producto y el precio.
 
 | Tiempo | Imagen | Voz en off |
 |---|---|---|
-| 0–3,8 s | Riel lleno de tierra | Dato curioso: más de la mitad del polvo de tu casa viene de afuera. |
-| 4–5,6 s | Empieza a aspirar | ¿Y por dónde entra? Por acá. |
-| 5,8–8,2 s | Aspirando | Mi riel tenía más tierra que mis plantas. |
-| 8,4–9,7 s | Depósito lleno | Mira el depósito. |
-| 9,9–11,9 s | Riel limpio | Y eso que era un solo riel. |
-| 12,1–14,3 s | Antes / Después | Antes… y después. |
-| 14,5–17 s | Producto + precio | Veinticuatro mil novecientos noventa. Toca Comprar. |
+| 0–3,5 s | Riel lleno de tierra | Dato curioso: más de la mitad del polvo de tu casa viene de afuera. |
+| 3,7–5,3 s | Empieza a aspirar | ¿Y por dónde entra? Por acá. |
+| 5,5–7,7 s | Aspirando | Mi riel tenía más tierra que mis plantas. |
+| 7,8–8,7 s | Depósito lleno | Mira el depósito. |
+| 8,9–10,3 s | Riel limpio | Y eso que era un solo riel. |
+| 10,6–12,1 s | Antes / Después ("después" aparece cuando la voz lo dice) | Antes… y después. |
+| 12,4–14,4 s | Producto + sticker de precio | Toca Comprar. |
 
 Texto para pegar en ElevenLabs (Victoria o Catalina):
 ```

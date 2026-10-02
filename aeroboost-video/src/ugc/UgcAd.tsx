@@ -42,9 +42,12 @@ export type UgcAdProps = {
   priceFromMs: number;
   // Path inside public/, e.g. "voiceover/puerta-auto.mp3". null = no VO yet.
   voiceover: string | null;
+  // Override the footage's own sound level (0 = muted, e.g. to drop someone
+  // talking in the original). Defaults to 0.25 under a voice-over, else 0.8.
+  originalVolume?: number;
 };
 
-export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, beforeAfter, endPhotos, script, label, price, priceFromMs, voiceover }) => {
+export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, beforeAfter, endPhotos, script, label, price, priceFromMs, voiceover, originalVolume }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
 
@@ -71,13 +74,13 @@ export const UgcAd: React.FC<UgcAdProps> = ({ video, clips, beforeAfter, endPhot
                   transformOrigin: clip.zoom?.origin ?? "center",
                 }}
                 // Keep the original sound as background ASMR under the voice.
-                volume={voiceover ? 0.25 : 0.8}
+                volume={originalVolume ?? (voiceover ? 0.25 : 0.8)}
               />
             </Series.Sequence>
           ))}
           {beforeAfter ? (
             <Series.Sequence name="Antes y después" durationInFrames={beforeAfter.durationInFrames} premountFor={fps}>
-              <BeforeAfter before={beforeAfter.before} after={beforeAfter.after} />
+              <BeforeAfter before={beforeAfter.before} after={beforeAfter.after} wipeFrom={beforeAfter.wipeFrom} />
             </Series.Sequence>
           ) : null}
           {endPhotos.map((photo) => (

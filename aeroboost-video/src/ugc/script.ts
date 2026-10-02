@@ -47,17 +47,22 @@ export const SCRIPT_SILLON: ScriptLine[] = [
   { startMs: 28830, endMs: 29750, text: "Toca Comprar." },
 ];
 
-// public/riel.mp4, edited to 17s (see Root.tsx). Angle: fun fact. A 2009
+// public/riel.mp4, edited to 14.3s (see Root.tsx). Angle: fun fact. A 2009
 // study (Layton & Beamer, Environmental Science & Technology) found about 60%
-// of house dust comes from outdoors. Timings are estimates until recorded.
+// of house dust comes from outdoors. Timed to public/voiceover/riel.mp3
+// (ElevenLabs, "Cristian Cornejo - Spanish Chilean"); the take doesn't say the
+// price, the sticker shows it.
 export const SCRIPT_RIEL: ScriptLine[] = [
-  { startMs: 100, endMs: 3800, text: "Dato curioso: más de la mitad del polvo de tu casa viene de afuera." },
-  { startMs: 4000, endMs: 5600, text: "¿Y por dónde entra? Por acá." },
-  { startMs: 5800, endMs: 8200, text: "Mi riel tenía más tierra que mis plantas." },
-  { startMs: 8400, endMs: 9700, text: "Mira el depósito." },
-  { startMs: 9900, endMs: 11900, text: "Y eso que era un solo riel." },
-  { startMs: 12100, endMs: 14300, text: "Antes… y después." },
-  { startMs: 14500, endMs: 16800, text: "$24.990. Toca Comprar." },
+  { startMs: 0, endMs: 740, text: "Dato curioso:" },
+  { startMs: 930, endMs: 3490, text: "más de la mitad del polvo de tu casa viene de afuera." },
+  { startMs: 3730, endMs: 4560, text: "¿Y por dónde entra?" },
+  { startMs: 4820, endMs: 5250, text: "Por acá." },
+  { startMs: 5510, endMs: 7660, text: "Mi riel tenía más tierra que mis plantas." },
+  { startMs: 7810, endMs: 8660, text: "Mira el depósito." },
+  { startMs: 8870, endMs: 10330, text: "Y eso que era un solo riel." },
+  { startMs: 10570, endMs: 11180, text: "Antes…" },
+  { startMs: 11530, endMs: 12140, text: "y después." },
+  { startMs: 12410, endMs: 13320, text: "Toca Comprar." },
 ];
 
 // Split each line into words and spread them across the line's time span,

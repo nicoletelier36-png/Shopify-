@@ -103,24 +103,28 @@ const swap: SwapAdProps = {
 };
 
 // Window track full of dust (33s source). The meme at the end (30.4s+) is
-// cut; slow stretches are sped up; a before/after split uses two frames of
-// the same footage (4.0s and 24.6s). Angle: fun fact about household dust.
+// cut and the original sound is muted (someone talks in English over it);
+// slow stretches are sped up; a before/after split uses two frames of the
+// same footage (4.0s and 24.6s). Angle: fun fact about household dust.
+// Cuts are timed to the 13.3s voice-over.
 const riel: UgcAdProps = {
   video: "riel.mp4",
   clips: [
-    // 215 × 1.3 ≈ 279 source frames: dirty track, vacuuming starts.
-    { trimBefore: 0, durationInFrames: 215, playbackRate: 1.3 },
-    { trimBefore: 312, durationInFrames: 78 }, // full dust cup
-    // 66 × 1.5 = 99 source frames: the track already clean.
-    { trimBefore: 591, durationInFrames: 66, playbackRate: 1.5 },
+    // 233 × 1.2 ≈ 279 source frames: dirty track, vacuuming starts.
+    { trimBefore: 0, durationInFrames: 233, playbackRate: 1.2 },
+    { trimBefore: 312, durationInFrames: 30 }, // full dust cup ("Mira el depósito")
+    // 52 × 1.5 = 78 source frames: the track already clean.
+    { trimBefore: 591, durationInFrames: 52, playbackRate: 1.5 },
   ],
-  beforeAfter: { before: "riel-antes.jpg", after: "riel-despues.jpg", durationInFrames: 75 },
-  endPhotos: [{ src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 75 }],
+  // "después" wipes in when the voice says it (11.5s).
+  beforeAfter: { before: "riel-antes.jpg", after: "riel-despues.jpg", durationInFrames: 54, wipeFrom: 29 },
+  endPhotos: [{ src: "asp-estudio.jpg", imgW: 1264, imgH: 1264, durationInFrames: 60 }],
   script: SCRIPT_RIEL,
   label: "Aspiradora inalámbrica 3 en 1",
   price: "$24.990",
-  priceFromMs: 14500,
-  voiceover: null,
+  priceFromMs: 12400,
+  voiceover: "voiceover/riel.mp3",
+  originalVolume: 0,
 };
 
 export const RemotionRoot: React.FC = () => {
