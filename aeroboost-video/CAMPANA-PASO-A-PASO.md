@@ -8,7 +8,8 @@ Hazla en el computador en **business.facebook.com → Administrador de anuncios 
 
 - [x] **Stock en Shopify:** 283 unidades cargadas en la bodega de Av. Las Condes 9765.
 - [ ] **Píxel conectado:** en Shopify, en la app *Facebook & Instagram*, revisa que el píxel y la API de conversiones estén activos. En el Administrador de eventos de Meta tiene que aparecer el evento **Purchase** (Compra).
-- [ ] **Ficha de producto:** abre https://aeroboost.cl/products/aeroboost-aspiradora-inalambrica-3-en-1 y confirma que carga, que se ve el precio $24.990 y que se puede agregar al carrito.
+- [x] **Envío:** ya configurado en Shopify: gratis en RM y Valparaíso, $4.000 al resto de Chile. Los textos de los anuncios lo dicen.
+- [x] **Ficha de producto:** revisada. Abre https://aeroboost.cl/products/aeroboost-aspiradora-inalambrica-3-en-1 y confirma que carga, que se ve el precio $24.990 y que se puede agregar al carrito.
 - [ ] **Videos descargados:** los 10 archivos (5 anuncios × 2 formatos) están en `out/`:
 
 | Anuncio | 9:16 (Reels, Stories) | 4:5 (Feed) |
@@ -72,6 +73,7 @@ Migas, tierra y polvo en las ranuras donde el paño no llega. La AeroBoost 3 en 
 ✅ Filtro lavable
 ✅ Cabe en la guantera
 
+🚚 Envío gratis en RM y V Región
 👉 $24.990. Toca "Comprar".
 ```
 Título: `Tu auto limpio en minutos`
@@ -90,6 +92,7 @@ La AeroBoost 3 en 1 la tienes a mano: la tierrita de las orillas, lo que se mete
 ✅ Se vacía directo al basurero
 ✅ Filtro lavable
 
+🚚 Envío gratis en RM y V Región
 👉 $24.990. Toca "Comprar".
 ```
 Título: `La aspiradora que sí vas a usar`
@@ -108,6 +111,7 @@ La AeroBoost 3 en 1 llega al fondo de las costuras en segundos:
 ✅ 3 boquillas (sillón, auto y escritorio)
 ✅ Filtro lavable
 
+🚚 Envío gratis en RM y V Región
 👉 $24.990. Toca "Comprar".
 ```
 Título: `Lo que esconde tu sillón`
@@ -124,6 +128,7 @@ La AeroBoost 3 en 1 lo saca en segundos con su boquilla fina:
 ✅ 3 boquillas
 ✅ Filtro lavable
 
+🚚 Envío gratis en RM y V Región
 👉 $24.990. Toca "Comprar".
 ```
 Título: `¿Hace cuánto no limpias tus rieles?`
@@ -142,6 +147,7 @@ Esto es lo que trae la AeroBoost 3 en 1 👇
 
 Asientos, portavasos, ranuras… y la alfombra queda como nueva.
 
+🚚 Envío gratis en RM y V Región
 👉 $24.990. Toca "Comprar".
 ```
 Título: `Mira lo que trae la caja`
