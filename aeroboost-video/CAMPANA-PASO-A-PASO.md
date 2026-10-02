@@ -6,7 +6,7 @@ Hazla en el computador en **business.facebook.com → Administrador de anuncios 
 
 ## 0. Antes de empezar (obligatorio)
 
-- [ ] **Stock en Shopify:** la AeroBoost tiene 0 unidades. Cárgalo, o activa "Seguir vendiendo cuando no haya stock". Si no, la ficha se ve agotada.
+- [x] **Stock en Shopify:** 283 unidades cargadas en la bodega de Av. Las Condes 9765.
 - [ ] **Píxel conectado:** en Shopify, en la app *Facebook & Instagram*, revisa que el píxel y la API de conversiones estén activos. En el Administrador de eventos de Meta tiene que aparecer el evento **Purchase** (Compra).
 - [ ] **Ficha de producto:** abre https://aeroboost.cl/products/aeroboost-aspiradora-inalambrica-3-en-1 y confirma que carga, que se ve el precio $24.990 y que se puede agregar al carrito.
 - [ ] **Videos descargados:** los 10 archivos (5 anuncios × 2 formatos) están en `out/`:
