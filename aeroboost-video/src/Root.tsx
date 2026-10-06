@@ -1,5 +1,6 @@
 import { Composition, Folder, Still } from "remotion";
 import { StaticAd } from "./static/StaticAd";
+import { ProfilePic } from "./static/ProfilePic";
 import type { SwapAdProps } from "./swap/SwapAd";
 import { SwapAd, swapDuration } from "./swap/SwapAd";
 import { AEROBOOST_DURATION, AeroBoostAd } from "./AeroBoostAd";
@@ -196,6 +197,10 @@ export const RemotionRoot: React.FC = () => {
             footer: "Toca \"Comprar\" y pídela hoy 👇",
           }}
         />
+      </Folder>
+      <Folder name="Perfil">
+        <Still id="PerfilProducto" component={ProfilePic} width={1080} height={1080} defaultProps={{ variant: "producto" as const }} />
+        <Still id="PerfilMarca" component={ProfilePic} width={1080} height={1080} defaultProps={{ variant: "marca" as const }} />
       </Folder>
       <Folder name="Lugares">
         <Composition id="LugaresReel" component={SwapAd} durationInFrames={swapDuration(swap)} {...reel} defaultProps={swap} />
