@@ -187,6 +187,12 @@
       "skillPath": "skills/remotion-upgrade/SKILL.md",
       "computedHash": "7d73963f9a9b6d12e27db2dcd2085036cbcd120a006460d69507b71e8b67196b"
     },
+    "scroll-world": {
+      "source": "oso95/scroll-world",
+      "sourceType": "github",
+      "skillPath": "skills/scroll-world/SKILL.md",
+      "computedHash": "e7ea15d223b6a687840306ab4e3e48ce507df3094c8e78742f6f8b84ae7face0"
+    },
     "slideshow": {
       "source": "heygen-com/hyperframes",
       "sourceType": "github",
