@@ -29,15 +29,16 @@ Hazla en el computador en **business.facebook.com → Administrador de anuncios 
 | Nombre | `AeroBoost · Ventas · Prueba 5 creativos · Oct 2026` |
 | Categorías especiales | Ninguna |
 | Prueba A/B | Desactivada |
-| Presupuesto de la campaña Advantage+ | **Activado**, presupuesto **diario** de **$25.000–$27.000 CLP** (ver nota) |
+| Presupuesto de la campaña Advantage+ | **Activado**, presupuesto **diario** de **$10.000 CLP** para partir (ver nota) |
 | Estrategia de puja | Volumen más alto (sin límite de costo) |
 
 > **Presupuesto y números clave** (precio $24.990, costo con envío $7.000, sin boleta):
-> - Meta suma 19 % de IVA: $25.000–$27.000 diarios se cobran como **≈ $29.800–$32.100**.
+> - Partida: **$10.000 diarios**. Meta suma 19 % de IVA, así que se cobran **≈ $11.900**.
 > - Margen por venta antes de publicidad: **≈ $16.300**.
 > - **CPA de equilibrio** (costo por compra en Meta): **$13.700**. **CPA máximo recomendado: $9.500**.
-> - Equilibrio diario: **~2 ventas al día**. Desde la 3ª venta diaria hay ganancia.
-> - Costo de la semana de prueba: **≈ $210.000–$225.000** con IVA.
+> - Con **1 venta diaria ya hay ganancia** (≈ +$4.400).
+> - Costo de la semana de prueba: **≈ $83.000** con IVA. Dale 7 días completos antes de juzgar.
+> - Cuando haya 1–2 ventas diarias estables, sube un 20 % cada 2–3 días (hacia $25.000–$30.000).
 
 ## 2. Conjunto de anuncios
 
@@ -170,7 +171,7 @@ Descripción: `Aspiradora inalámbrica 3 en 1`
 |---|---|
 | Días 1–3 | **No tocar los anuncios.** Cualquier cambio reinicia la fase de aprendizaje |
 | Día 2 (alarma) | Más de 150 clics en el enlace y **0 "Agregar al carrito"** → el problema está en la ficha o en el checkout. Pausa y revísalo |
-| Día 3 (corte de pérdida) | **~$80.000 gastados y 0 compras** → pausa todo y revisa el píxel, el checkout y la ficha antes de seguir |
+| Día 4 (corte de pérdida) | **~$48.000 gastados y 0 compras** → pausa todo y revisa el píxel, el checkout y la ficha antes de seguir |
 | Día 4 | Revisa por anuncio: hook rate (reproducciones de 3 s / impresiones) **> 25 %**, CTR (enlace) **> 1 %**. Apaga los que tengan más de 1.000 impresiones y CTR < 0,7 % |
 | Día 7 | Mira el **costo por compra** de cada anuncio. Apaga los que estén sobre **$13.700** (pierdes plata). Deja los que estén bajo **$9.500** |
 | Día 8+ | Con 1–2 ganadores, sube el presupuesto un 20 % cada 2–3 días. Haz variantes del ganador cambiando solo los primeros 3 segundos |
