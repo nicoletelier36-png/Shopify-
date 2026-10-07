@@ -199,8 +199,8 @@ export const RemotionRoot: React.FC = () => {
         />
       </Folder>
       <Folder name="Perfil">
-        <Still id="PerfilProducto" component={ProfilePic} width={1080} height={1080} defaultProps={{ variant: "producto" as const }} />
-        <Still id="PerfilMarca" component={ProfilePic} width={1080} height={1080} defaultProps={{ variant: "marca" as const }} />
+        <Still id="PerfilBlanco" component={ProfilePic} width={1080} height={1080} defaultProps={{ variant: "blanco" as const }} />
+        <Still id="PerfilNaranja" component={ProfilePic} width={1080} height={1080} defaultProps={{ variant: "naranja" as const }} />
       </Folder>
       <Folder name="Lugares">
         <Composition id="LugaresReel" component={SwapAd} durationInFrames={swapDuration(swap)} {...reel} defaultProps={swap} />
